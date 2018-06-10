@@ -2,8 +2,8 @@ import AsynchronousCaller from "../AsynchronousCaller";
 import ImmediateCaller from "../ImmediateCaller";
 import SynchronousCaller from "../SynchronousCaller";
 
-describe("AsynchronousCaller", () => {
-  const caller = new AsynchronousCaller();
+describe("SynchronousCaller", () => {
+  const caller = new ImmediateCaller();
 
   it("calls the provided callable", async () => {
     const callable = jest.fn();
@@ -24,12 +24,12 @@ describe("AsynchronousCaller", () => {
     });
   });
 
-  it("asynchronously calls the callable", async () => {
+  it("immediatly calls the callables", async () => {
     const callable = jest.fn();
 
     await Promise.all([
-      caller.call(null, callable, "c"),
-      new ImmediateCaller().call(null, callable, "b"),
+      new AsynchronousCaller().call(null, callable, "c"),
+      caller.call(null, callable, "b"),
       new SynchronousCaller().call(null, callable, "a")
     ]);
 

@@ -1,0 +1,106 @@
+{
+  "name": "@orlandohohmeier/caller",
+  "version": "0.0.0-development",
+  "description": "",
+  "main": "dist/index.js",
+  "author": "Orlando Hohmeier",
+  "license": "MIT",
+  "scripts": {
+    "test": "jest",
+    "build": "tsc",
+    "semantic-release": "semantic-release",
+    "travis-deploy-once": "travis-deploy-once"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "jest": {
+    "collectCoverage": true,
+    "coverageReporters": [
+      "text"
+    ],
+    "reporters": [
+      "default",
+      "jest-junit"
+    ],
+    "projects": [
+      {
+        "displayName": "Jest",
+        "transform": {
+          "^.+\\.ts$": "ts-jest"
+        },
+        "testRegex": "/__tests__/.*-test.ts$",
+        "moduleFileExtensions": [
+          "ts",
+          "js",
+          "json"
+        ],
+        "testPathIgnorePatterns": [
+          "/node_modules/",
+          "/helpers/"
+        ]
+      },
+      {
+        "displayName": "Prettier",
+        "runner": "jest-runner-prettier",
+        "moduleFileExtensions": [
+          "js",
+          "ts",
+          "md",
+          "json"
+        ],
+        "testMatch": [
+          "<rootDir>/src/**/*.js",
+          "<rootDir>/src/*.ts",
+          "<rootDir>/src/**/*.ts",
+          "**/*.md"
+        ]
+      },
+      {
+        "displayName": "TsLint",
+        "runner": "jest-runner-tslint",
+        "moduleFileExtensions": [
+          "ts"
+        ],
+        "testMatch": [
+          "**/*.ts"
+        ],
+        "testPathIgnorePatterns": [
+          "/node_modules/",
+          "/src/@types/"
+        ]
+      }
+    ]
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ],
+    "rules": {
+      "scope-case": [
+        0
+      ]
+    }
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^7.0.0",
+    "@commitlint/config-conventional": "^7.0.1",
+    "@types/jest": "^23.0.0",
+    "jest": "^23.1.0",
+    "jest-junit": "^5.0.0",
+    "jest-runner-prettier": "^0.2.3",
+    "jest-runner-tslint": "^1.0.4",
+    "prettier": "^1.11.1",
+    "semantic-release": "^15.5.1",
+    "travis-deploy-once": "^5.0.0",
+    "ts-jest": "^22.4.6",
+    "tslint": "^5.9.1",
+    "tslint-config-prettier": "^1.10.0",
+    "tslint-eslint-rules": "^5.1.0",
+    "typescript": "^2.8.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/orlandohohmeier/caller.git"
+  }
+}

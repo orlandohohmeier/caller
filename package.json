@@ -8,11 +8,18 @@
   "scripts": {
     "test": "jest",
     "build": "tsc",
+    "commitlint": "commitlint",
     "semantic-release": "semantic-release",
     "travis-deploy-once": "travis-deploy-once"
   },
   "publishConfig": {
     "access": "public"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "files=$(git diff --staged --name-only);  [ -z \"${files}\" ] && exit 0 || yarn test -- --findRelatedTests ${files};",
+      "post-commit": "yarn commitlint -- -e $GIT_PARAMS"
+    }
   },
   "jest": {
     "collectCoverage": true,
@@ -86,6 +93,7 @@
     "@commitlint/cli": "^7.0.0",
     "@commitlint/config-conventional": "^7.0.1",
     "@types/jest": "^23.0.0",
+    "husky": "next",
     "jest": "^23.1.0",
     "jest-junit": "^5.0.0",
     "jest-runner-prettier": "^0.2.3",

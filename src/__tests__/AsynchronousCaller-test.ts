@@ -28,6 +28,7 @@ describe("AsynchronousCaller", () => {
     const callable = jest.fn();
 
     await Promise.all([
+      new Promise(resolve => setTimeout(resolve)).then(() => callable("d")),
       caller.call(null, callable, "c"),
       new ImmediateCaller().call(null, callable, "b"),
       new SynchronousCaller().call(null, callable, "a")
@@ -36,5 +37,6 @@ describe("AsynchronousCaller", () => {
     expect(callable).toHaveBeenNthCalledWith(1, "a");
     expect(callable).toHaveBeenNthCalledWith(2, "b");
     expect(callable).toHaveBeenNthCalledWith(3, "c");
+    expect(callable).toHaveBeenNthCalledWith(4, "d");
   });
 });

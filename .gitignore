@@ -1,0 +1,9 @@
+.vscode/
+.idea/
+
+node_modules/
+
+dist/
+
+coverage/
+junit.xml

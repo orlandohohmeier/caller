@@ -1584,7 +1584,14 @@ create-error-class@^3.0.0:
   dependencies:
     capture-stack-trace "^1.0.0"
 
-create-jest-runner@0.3.1, create-jest-runner@^0.3.0:
+create-jest-runner@0.4.0:
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/create-jest-runner/-/create-jest-runner-0.4.0.tgz#7a9419e9410484aec5048691c19745a4285baf45"
+  dependencies:
+    jest-worker "^22.0.0"
+    throat "^4.1.0"
+
+create-jest-runner@^0.3.0:
   version "0.3.1"
   resolved "https://registry.yarnpkg.com/create-jest-runner/-/create-jest-runner-0.3.1.tgz#c4cd197a3fe3dcfff3f0e1b2c19f7cc562ac6928"
   dependencies:
@@ -3260,12 +3267,12 @@ jest-resolve@^23.1.0:
     chalk "^2.0.1"
     realpath-native "^1.0.0"
 
-jest-runner-prettier@0.2.3:
-  version "0.2.3"
-  resolved "https://registry.yarnpkg.com/jest-runner-prettier/-/jest-runner-prettier-0.2.3.tgz#8e1fd34b595e9c40114da1e42d3e2a69773c4306"
+jest-runner-prettier@0.2.4:
+  version "0.2.4"
+  resolved "https://registry.yarnpkg.com/jest-runner-prettier/-/jest-runner-prettier-0.2.4.tgz#cfbea029366c706e0e68cb5be008943830c7367f"
   dependencies:
     cli-highlight "^1.2.1"
-    create-jest-runner "0.3.1"
+    create-jest-runner "0.4.0"
     jest-diff "^22.0.0"
     prettier "^1.8.2"
 

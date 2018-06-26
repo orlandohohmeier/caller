@@ -92,7 +92,7 @@
   "devDependencies": {
     "@commitlint/cli": "7.0.0",
     "@commitlint/config-conventional": "7.0.1",
-    "@types/jest": "23.1.1",
+    "@types/jest": "23.1.2",
     "husky": "next",
     "jest": "23.2.0",
     "jest-junit": "5.1.0",

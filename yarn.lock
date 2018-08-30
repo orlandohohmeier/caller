@@ -6516,9 +6516,9 @@ traverse@~0.6.6:
   version "0.6.6"
   resolved "https://registry.yarnpkg.com/traverse/-/traverse-0.6.6.tgz#cbdf560fd7b9af632502fed40f918c157ea97137"
 
-travis-deploy-once@5.0.5:
-  version "5.0.5"
-  resolved "https://registry.yarnpkg.com/travis-deploy-once/-/travis-deploy-once-5.0.5.tgz#c6330a037fd596cb4de04893a33eb1636bee1d4a"
+travis-deploy-once@5.0.6:
+  version "5.0.6"
+  resolved "https://registry.yarnpkg.com/travis-deploy-once/-/travis-deploy-once-5.0.6.tgz#0ad02725c16051517ee39d3bfa82a1d31728ddaa"
   dependencies:
     "@babel/core" "^7.0.0"
     "@babel/polyfill" "^7.0.0"

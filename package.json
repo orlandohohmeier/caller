@@ -94,7 +94,7 @@
     "@commitlint/config-conventional": "7.1.2",
     "@types/jest": "23.3.2",
     "husky": "next",
-    "jest": "23.5.0",
+    "jest": "23.6.0",
     "jest-junit": "5.1.0",
     "jest-runner-prettier": "0.2.6",
     "jest-runner-tslint": "1.0.5",

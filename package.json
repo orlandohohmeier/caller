@@ -99,7 +99,7 @@
     "jest-runner-prettier": "0.2.6",
     "jest-runner-tslint": "1.0.5",
     "prettier": "1.19.1",
-    "semantic-release": "15.9.17",
+    "semantic-release": "15.14.0",
     "travis-deploy-once": "5.0.11",
     "ts-jest": "23.10.5",
     "tslint": "5.20.1",

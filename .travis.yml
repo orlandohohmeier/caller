@@ -10,8 +10,14 @@ node_js:
 script:
     - yarn test
     - yarn build
-after_success:
-  - yarn travis-deploy-once --pro "yarn semantic-release"
+jobs:
+  include:
+    - stage: test
+      script: yarn test
+    - stage: build
+      script: yarn build
+    - stage: release
+      script: yarn semantic-release
 branches:
   except:
     - /^v\d+\.\d+\.\d+$/
